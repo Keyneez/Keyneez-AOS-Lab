@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".KeyneezApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,14 +14,14 @@
         android:theme="@style/Theme.Keyneez"
         tools:targetApi="31">
         <activity
-            android:name=".CardActivity"
+            android:name=".presentation.card.CardActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".VerificationActivity"
+            android:name=".presentation.verification.VerificationActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
