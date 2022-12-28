@@ -9,7 +9,7 @@ import retrofit2.Retrofit
 
 @Module
 @InstallIn(SingletonComponent::class)
-object RetrofitServiceModule {
+object ServiceModule {
     @Provides
     fun providesAuthService(retrofit: Retrofit): ExampleService =
         retrofit.create(ExampleService::class.java)
