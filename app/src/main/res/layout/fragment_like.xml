@@ -1,21 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.main.home.HomeFragment">
 
-    <data>
+    <data></data>
 
-    </data>
-
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_like"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".presentation.main.like.LikeFragment">
-
-        <!-- TODO: Update blank fragment layout -->
+        android:layout_height="match_parent">
+        <!--폰트의 경우 textappearance로-->
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:id="@+id/tv_like_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="52dp"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="6dp"
+            android:text="@string/like_save"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/layout_like"
+            app:layout_constraintTop_toTopOf="@id/layout_like" />
 
-    </FrameLayout>
+        <ImageButton
+            android:id="@+id/btn_like_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="12dp"
+            android:background="@null"
+            android:padding="12dp"
+            android:src="@drawable/ic_like_search"
+            app:layout_constraintEnd_toEndOf="@id/layout_like"
+            app:layout_constraintTop_toTopOf="@id/layout_like" />
+
+        <ImageView
+            android:id="@+id/iv_like_baseline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:paddingHorizontal="12dp"
+            android:src="@drawable/ic_like_baseline"
+            app:layout_constraintStart_toStartOf="@id/layout_like"
+            app:layout_constraintTop_toBottomOf="@id/tv_like_save" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_like_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="9dp"
+            android:overScrollMode="never"
+            android:paddingTop="26dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_like_baseline"
+            tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/item_like_content"
+            tools:spanCount="2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
