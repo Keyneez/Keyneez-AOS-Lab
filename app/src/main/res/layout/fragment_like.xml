@@ -33,8 +33,7 @@
             android:layout_marginTop="48dp"
             android:layout_marginEnd="12dp"
             android:background="@null"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="12dp"
+            android:padding="12dp"
             android:src="@drawable/ic_like_search"
             app:layout_constraintEnd_toEndOf="@id/layout_like"
             app:layout_constraintTop_toTopOf="@id/layout_like" />
