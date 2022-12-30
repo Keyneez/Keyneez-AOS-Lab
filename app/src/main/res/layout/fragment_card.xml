@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".presentation.main.card.CardFragment">
 
@@ -7,15 +8,81 @@
 
     </data>
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_card"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/black_600">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <ImageView
+            android:id="@+id/iv_card_keyneez"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_card_keyneez"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_card_issue"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Card" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_card_keyneez">
 
-    </FrameLayout>
+            <ImageView
+                android:id="@+id/iv_card_cards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_card_cards"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_card_my_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/card_my_id"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_card_cards" />
+
+            <TextView
+                android:id="@+id/tv_card_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/card_my_id_description"
+                android:textColor="@color/gray_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_card_my_id" />
+
+            <TextView
+                android:id="@+id/btn_card_issue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="61dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/shape_white_fill_9_rect"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:text="@string/card_issue"
+                android:textColor="@color/black_800"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tv_card_description" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
