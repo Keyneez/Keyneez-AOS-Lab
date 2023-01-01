@@ -5,10 +5,25 @@
     <string name="binding_error">Binding not initialized to reference the view.</string>
 
     // main
-    <string name="main_home">"Home"</string>
+    <string name="main_home">Home</string>
     <string name="main_like">Like</string>
     <string name="main_card">Card</string>
     <string name="main_setting">Setting</string>
+
+    //like
+    <string name="like_save">저장</string>
+    <string name="like_data">11.24-12.31</string>
+    <string name="like_content">청소년 영화관 할인</string>
+
+    // card
+    <string name="card_my_id">나의 ID</string>
+    <string name="card_my_id_description">온라인 ID로 더 다양한\n활동을 즐겨보세요</string>
+    <string name="card_issue">발급하기</string>
+
+    // verification
+    <string name="verification_start_camera">촬영 시작하기</string>
+    <string name="verification_description">학생증 또는 청소년증을\n준비해주세요.</string>
+    <string name="verification_sub_description">청소년 인증을 위해 학생증/청소년증\n촬영이 필요해요.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
