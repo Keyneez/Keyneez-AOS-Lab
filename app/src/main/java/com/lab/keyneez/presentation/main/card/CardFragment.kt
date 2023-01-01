@@ -18,8 +18,8 @@ class CardFragment : BindingFragment<FragmentCardBinding>(R.layout.fragment_card
 
     private fun initIssueBtnClickListener() {
         binding.btnCardIssue.setOnSingleClickListener {
-            val toVertification = Intent(activity, VerificationActivity::class.java)
-            startActivity(toVertification)
+            val toVerification = Intent(activity, VerificationActivity::class.java)
+            startActivity(toVerification)
         }
     }
 

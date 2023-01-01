@@ -1,8 +1,10 @@
 package com.lab.keyneez.presentation.verification
 
+import android.content.Intent
 import android.os.Bundle
 import com.lab.keyneez.R
 import com.lab.keyneez.databinding.ActivityVerificationBinding
+import com.lab.keyneez.presentation.preview.PreviewActivity
 import com.lab.keyneez.util.binding.BindingActivity
 import com.lab.keyneez.util.extension.setOnSingleClickListener
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,6 +24,7 @@ class VerificationActivity :
     }
 
     private fun initStartCameraBtnClickListener() {
-        // ocr 기능 구현
+        val toPreview = Intent(this, PreviewActivity::class.java)
+        startActivity(toPreview)
     }
 }
