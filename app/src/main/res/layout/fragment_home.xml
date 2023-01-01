@@ -39,6 +39,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="115dp"
+            app:tabSelectedTextColor="@color/gray900"
+            app:tabTextColor="@color/gray400"
+            app:tabIndicatorColor="@color/gray900"
+            app:tabIndicatorHeight="3dp"
             app:layout_constraintTop_toBottomOf="@id/tv_home_logo">
 
             <com.google.android.material.tabs.TabItem
