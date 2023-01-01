@@ -2,7 +2,6 @@ package com.lab.keyneez.presentation.main.home
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.FragmentManager
 import com.google.android.material.tabs.TabLayoutMediator
 import com.lab.keyneez.R
 import com.lab.keyneez.databinding.FragmentHomeBinding
