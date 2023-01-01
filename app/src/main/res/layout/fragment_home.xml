@@ -26,8 +26,8 @@
             android:id="@+id/btn_home_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="13dp"
             android:layout_marginStart="215dp"
+            android:padding="13dp"
             android:background="@color/white"
             android:src="@drawable/ic_search"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,22 +38,23 @@
             android:id="@+id/tab_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             app:layout_constraintTop_toBottomOf="@id/tv_home_logo">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="추천" />
+                android:text="@string/home_recommend" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="인기" />
+                android:text="@string/home_popular" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="최신" />
+                android:text="@string/home_new" />
         </com.google.android.material.tabs.TabLayout>
 
         <androidx.viewpager2.widget.ViewPager2

@@ -27,4 +27,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_recommend">추천</string>
+    <string name="home_popular">인기</string>
+    <string name="home_new">최신</string>
 </resources>
