@@ -53,6 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="9dp"
+            android:clipToPadding="false"
             android:paddingHorizontal="20dp"
             android:paddingTop="26dp"
             app:layout_constraintBottom_toBottomOf="parent"
