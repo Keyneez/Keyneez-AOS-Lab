@@ -25,6 +25,10 @@
     <string name="verification_description">학생증 또는 청소년증을\n준비해주세요.</string>
     <string name="verification_sub_description">청소년 인증을 위해 학생증/청소년증\n촬영이 필요해요.</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    //home
+    <string name="home_recommend">추천</string>
+    <string name="home_popular">인기</string>
+    <string name="home_new">최신</string>
+    <string name="infomain_title">청소년 영화관 할인</string>
+    <string name="infomain_sub">영화보면서 팝콘 어때요</string>
 </resources>
