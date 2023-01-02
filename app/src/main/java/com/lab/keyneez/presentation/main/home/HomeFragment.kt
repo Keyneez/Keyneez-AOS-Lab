@@ -10,15 +10,21 @@ import com.lab.keyneez.util.binding.BindingFragment
 
 class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
-    private lateinit var ViewPagerAdapter: HomeVPFragmentAdapter
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initHomeViewPagerAdapter()
+    }
+
+    private fun initHomeViewPagerAdapter() {
         val viewPager = binding.vpHome
         val tabLayout = binding.tabHome
 
-        val homeTabTitles = listOf<String>("추천", "인기", "최신")
+        val homeTabTitles = listOf<String>(
+            getString(R.string.home_recommend),
+            getString(R.string.home_popular),
+            getString(R.string.home_new)
+        )
 
         viewPager.adapter = HomeVPFragmentAdapter(parentFragmentManager, lifecycle)
 
