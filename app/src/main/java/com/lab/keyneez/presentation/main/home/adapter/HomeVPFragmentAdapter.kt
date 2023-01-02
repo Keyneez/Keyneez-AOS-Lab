@@ -4,9 +4,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.lab.keyneez.presentation.main.home.HomeVPNewFragment
-import com.lab.keyneez.presentation.main.home.HomeVPPopularFragment
-import com.lab.keyneez.presentation.main.home.HomeVPRecommendFragment
+import com.lab.keyneez.presentation.main.home.NewInfoFragment
+import com.lab.keyneez.presentation.main.home.PopularInfoFragment
+import com.lab.keyneez.presentation.main.home.RecommendInfoFragment
 
 class HomeVPFragmentAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {
@@ -16,10 +16,10 @@ class HomeVPFragmentAdapter(fragmentManager: FragmentManager, lifecycle: Lifecyc
 
     override fun createFragment(position: Int): Fragment {
         when (position) {
-            0 -> return HomeVPRecommendFragment()
-            1 -> return HomeVPPopularFragment()
-            2 -> return HomeVPNewFragment()
+            0 -> return RecommendInfoFragment()
+            1 -> return PopularInfoFragment()
+            2 -> return NewInfoFragment()
         }
-        return HomeVPRecommendFragment()
+        return RecommendInfoFragment()
     }
 }
