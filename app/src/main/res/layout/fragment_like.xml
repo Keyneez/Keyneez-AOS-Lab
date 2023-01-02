@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".presentation.main.home.HomeFragment">
+    tools:context=".presentation.main.like.LikeFragment">
 
     <data></data>
 
@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
         <!--폰트의 경우 textappearance로-->
         <TextView
-            android:id="@+id/tv_like_save"
+            android:id="@+id/btn_like_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
@@ -46,16 +46,17 @@
             android:paddingHorizontal="12dp"
             android:src="@drawable/ic_like_baseline"
             app:layout_constraintStart_toStartOf="@id/layout_like"
-            app:layout_constraintTop_toBottomOf="@id/tv_like_save" />
+            app:layout_constraintTop_toBottomOf="@id/btn_like_save" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_like_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
+            android:layout_height="0dp"
             android:layout_marginTop="9dp"
-            android:overScrollMode="never"
+            android:clipToPadding="false"
+            android:paddingHorizontal="20dp"
             android:paddingTop="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_like_baseline"
             tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             tools:listitem="@layout/item_like_content"

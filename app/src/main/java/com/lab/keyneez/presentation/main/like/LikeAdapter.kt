@@ -1,41 +1,34 @@
 package com.lab.keyneez.presentation.main.like
 
-import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.lab.keyneez.R
 import com.lab.keyneez.data.entity.LikeData
+import com.lab.keyneez.databinding.ItemLikeContentBinding
 
-class LikeAdapter(private val context: Context) :
-    RecyclerView.Adapter<LikeAdapter.ViewHolder>() {
+class LikeAdapter :
+    RecyclerView.Adapter<LikeAdapter.getViewHolder>() {
     var data = mutableListOf<LikeData>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_like_content, parent, false)
-        return ViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): getViewHolder {
+        val binding =
+            ItemLikeContentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return getViewHolder(binding)
     }
 
     override fun getItemCount(): Int = data.size
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: getViewHolder, position: Int) {
         holder.bind(data[position])
     }
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
-        private val imgBackground: ImageView = itemView.findViewById(R.id.iv_like_background)
-        private val tvDate: TextView = itemView.findViewById(R.id.tv_like_date)
-        private val tvTitle: TextView = itemView.findViewById(R.id.tv_like_title)
-
+    class getViewHolder(private val binding: ItemLikeContentBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(item: LikeData) {
-            Glide.with(itemView).load(item.background).into(imgBackground)
-            tvDate.text = item.date.toString()
-            tvTitle.text = item.title
+            Glide.with(itemView).load(item.background).into(binding.ivLikeBackground)
+            binding.tvLikeDate.text = item.date
+            binding.tvLikeTitle.text = item.title
         }
     }
 }
