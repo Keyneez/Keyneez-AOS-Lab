@@ -7,9 +7,8 @@ import com.bumptech.glide.Glide
 import com.lab.keyneez.data.entity.LikeData
 import com.lab.keyneez.databinding.ItemLikeContentBinding
 
-class LikeAdapter :
-    RecyclerView.Adapter<LikeAdapter.getViewHolder>() {
-    var data = mutableListOf<LikeData>()
+class LikeAdapter : RecyclerView.Adapter<LikeAdapter.getViewHolder>() {
+    var data = listOf<LikeData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): getViewHolder {
         val binding =
